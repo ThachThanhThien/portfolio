@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Willy – Developer & Maker</title>
+  <meta name="description" content="Hi, I'm Willy. I build web tools, mobile apps and browser extensions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">T<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#web">Web</a>
+        <a href="#apps">Apps</a>
+        <a href="#extensions">Extensions</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero container" id="about">
+      <div class="hero-text reveal">
+        <p class="eyebrow">👋 Hello, I'm</p>
+        <!-- TODO: replace with your name & intro -->
+        <h1><span class="gradient">Willy</span></h1>
+        <p class="lead">
+          A developer who loves building small, useful things — learning tools for the web,
+          mobile apps that help with everyday life, and browser extensions that make the
+          internet a little nicer.
+        </p>
+        <div class="hero-cta">
+          <a href="#web" class="btn btn-primary">See my projects</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <ul class="stats">
+          <li><strong>3</strong><span>Web projects</span></li>
+          <li><strong>3</strong><span>Mobile apps</span></li>
+          <li><strong>3</strong><span>Extensions</span></li>
+        </ul>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="avatar">
+          <!-- TODO: replace with <img src="assets/avatar.jpg" alt="Thien"> -->
+          <span>T</span>
+        </div>
+        <div class="floating f1">📚</div>
+        <div class="floating f2">🧰</div>
+        <div class="floating f3">🍳</div>
+        <div class="floating f4">🧩</div>
+      </div>
+    </section>
+
+    <!-- ============ WEB PROJECTS ============ -->
+    <section class="section container" id="web">
+      <div class="section-head reveal">
+        <p class="eyebrow">Web</p>
+        <h2>Web projects</h2>
+        <p>Open them right in your browser.</p>
+      </div>
+      <div class="cards" id="webCards"></div>
+    </section>
+
+    <!-- ============ APPS ============ -->
+    <section class="section container" id="apps">
+      <div class="section-head reveal">
+        <p class="eyebrow">Mobile</p>
+        <h2>Apps</h2>
+        <p>Small apps for everyday life.</p>
+      </div>
+      <div class="showcase" id="appList"></div>
+    </section>
+
+    <!-- ============ EXTENSIONS ============ -->
+    <section class="section container" id="extensions">
+      <div class="section-head reveal">
+        <p class="eyebrow">Browser</p>
+        <h2>Extensions</h2>
+        <p>Make your browser work better for you.</p>
+      </div>
+      <div class="showcase" id="extList"></div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section container" id="contact">
+      <div class="contact-box reveal">
+        <h2>Let's connect</h2>
+        <p>Have feedback, an idea, or just want to say hi? I'd love to hear from you.</p>
+        <!-- TODO: update your links -->
+        <div class="socials">
+          <a class="btn btn-primary" href="mailto:thienthach96@gmail.com">✉️ Email me</a>
+          <a class="btn btn-ghost" href="https://github.com/ThachThanhThien" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Thien. Made with ☕ and curiosity.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
