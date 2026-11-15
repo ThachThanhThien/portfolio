@@ -81,8 +81,13 @@ const extensions = [
       "Create flash cards from any web page and review them with spaced repetition right from your browser toolbar.",
     features: ["Save words from any page", "Spaced repetition reviews", "Sync across devices"],
     downloads: [
-      { type: "chrome", url: "#" }, // TODO
-      { type: "firefox", url: "#" }, // TODO (remove if not available)
+      {
+        type: "download",
+        label: "Download Extension",
+        sub: "Get the ZIP file",
+        icon: "📦",
+        url: "https://drive.google.com/uc?export=download&id=1WBzNAnV0doXFDB0eOc1mWysl4Jjbz1Bi",
+      },
     ],
   },
   {
@@ -94,8 +99,13 @@ const extensions = [
       "Apply a beautiful dark theme to any website with one click. Adjust brightness and contrast, or whitelist sites.",
     features: ["One-click dark mode", "Per-site settings", "Brightness & contrast control"],
     downloads: [
-      { type: "chrome", url: "#" },
-      { type: "firefox", url: "#" },
+      {
+        type: "download",
+        label: "Download Extension",
+        sub: "Get the ZIP file",
+        icon: "📦",
+        url: "https://drive.google.com/uc?export=download&id=1WZZzuwPSXSegcYx8Q2c55l7UUa4CKw0k",
+      },
     ],
   },
   {
@@ -107,8 +117,13 @@ const extensions = [
       "A lightweight task manager that lives in your browser. Capture tasks quickly and stay focused on what matters.",
     features: ["Quick-add from toolbar", "Due dates & priorities", "New-tab task overview"],
     downloads: [
-      { type: "chrome", url: "#" },
-      { type: "firefox", url: "#" },
+      {
+        type: "download",
+        label: "Download Extension",
+        sub: "Get the ZIP file",
+        icon: "📦",
+        url: "https://drive.google.com/uc?export=download&id=1Px_PJFL1cvvbbxi8vyJdIZyeE6zO3-Q3",
+      },
     ],
   },
 ];
@@ -150,7 +165,11 @@ function renderShowcase(rootId, items, kind) {
   items.forEach((item, i) => {
     const buttons = item.downloads
       .map((d) => {
-        const s = STORE[d.type];
+        const s = STORE[d.type] || {
+          label: d.label || "Download",
+          sub: d.sub || "Direct download",
+          icon: d.icon || "📥",
+        };
         return `<a class="store-btn" href="${d.url}" target="_blank" rel="noopener">
             <span class="store-icon">${s.icon}</span>
             <span><small>${s.sub}</small>${s.label}</span>
